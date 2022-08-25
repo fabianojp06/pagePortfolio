@@ -5,6 +5,8 @@ const api = express();
 const port = 3000;
 const router = express.Router();
 
+const portfolioRouter = require('./router/portfolioRouter');
+
 api.use(cors());
 
 api.use(bodyparser.urlencoded({ extended: true }));
@@ -17,6 +19,7 @@ router.get('/', (req, res) =>
 );
 
 api.use('/', router);
+api.use('/portfolio', portfolioRouter);
 
 api.listen(port);
 console.log('Run API!');
