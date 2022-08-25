@@ -1,1 +1,0 @@
-const fabiano = require('mysql');
