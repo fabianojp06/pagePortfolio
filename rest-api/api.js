@@ -13,9 +13,7 @@ api.use(bodyparser.urlencoded({ extended: true }));
 api.use(bodyparser.json());
 
 router.get('/', (req, res) =>
-  res.json({
-    mensagem: 'API online!',
-  })
+  res.json({ mensagem: 'API online!'})
 );
 
 api.use('/', router);
